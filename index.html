@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta property="og:title" content="LA ZONE WEBSITE OFFICIEL">
+  <meta property="og:description" content="Site officiel de LaZone">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1190059731075731546/1212491418304520222/logo_lazonerond.png?ex=65f207a1&is=65df92a1&hm=1f24c9208907a62ef87e71f84f3ecd5841f4b4c2078dd37926903b67ef0a96e3&">
+  <link rel="icon" type="image/png" href="images/logo_lazone(rond).png">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="styles.css">
+    <title>LaZone</title>
+</head>
+<body>
+
+  <div class="hero-banner">
+    <h1>Bienvenue dans <span><a href="https://discord.gg/PmWp888tcS" target="_blank">LaZone</a></span></h1>
+    <h2>Un espace de communauté et de développement web</h2>
+    <p>
+      LaZone est bien plus qu'un simple serveur Discord. C'est un lieu où les passionnés de développement web et les ammateurs se rencontrent, partagent des idées, apprennent et collaborent. Que vous soyez un débutant curieux ou un expert chevronné, vous trouverez une place ici pour échanger et grandir ensemble. Rejoignez-nous pour explorer un univers de code, de convivialité et de créativité !
+    </p>
+    <a href="https://discord.gg/PmWp888tcS" target="_blank" class="cta-button">Rejoindre LaZone</a>
+
+
+    <header>
+        <nav class="navbar" id="navbar">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#support">Support</a></li>
+          </ul>
+        </nav>
+    </header>
+  </div>
+
+
+    <main>
+      <section class="home" id="home">
+        <div class="container">
+          <img src="images/logo_lazone(rond).png" alt="Logo LaZone" width="50%">
+          <h2>Bienvenue sur LaZone</h2>
+          <p>
+            Explorez un univers de développement web et de communauté.
+          </p>
+          <a href="https://discord.gg/PmWp888tcS" target="_blank" class="cta-button">En savoir plus</a>
+        </div>
+    </section>
+
+
+    <section class="about" id="about">
+      <div class="container">
+        <img src="images/about.png" alt="Logo LaZone" width="50%" style="border-radius: 50%;">
+        <h2>A propos de LaZone</h2>
+        <p>
+          LaZone est une communauté. Notre objectif est de fournir un espace où les passionnés de développement web peuvent se réunir, échanger des idées, collaborer sur des projets et apprendre les uns des autres.
+        </p>
+      </div>
+  </section>
+
+
+  <section class="support" id="support">
+    <div class="container">
+        <h2>Besoin d'aide ? Contactez-nous !</h2>
+        <div class="contact-info">
+            <p>Envoyez-nous un email à <a href="mailto:lazone.mailpro@gmail.com">lazone.mailpro@gmail.com</a></p>
+            <p>Discord des fondateurs : <a href="https://discordapp.com/users/_nolhan_">#_nolhan_</a>, <a href="https://discordapp.com/users/akimbo_59">#akimbo_59</a></p>
+            <iframe src="https://discord.com/widget?id=1209626871004925972&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        </div>
+        <form method="post" action="mailto:lazone.emailpro@gmail.com">
+          <div class="form">
+            <div class="title">LaZone</div>
+            <div class="subtitle">Besoin d'aide ? Une question ? Un problème ? Ou autre ? Contact-nous par mail ou via Discord !</div>
+
+            <div class="input-container ic1">
+              <input id="email" class="input" type="text" placeholder=" " />
+              <div class="cut cut-short"></div>
+              <label for="email" class="placeholder">Email</>
+            </div>
+
+            <div class="input-container ic2">
+              <textarea id="message" class="input" type="text" placeholder=" " rows="10" cols="30" name="message"></textarea>
+              <div class="cut"></div>
+              <label for="message" class="placeholder">Message</label>
+            </div>
+
+            <button type="text" class="submit">Envoyer</button>
+          </div>
+        </form>
+    </div>
+</section>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function (event) {
+          event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+          
+          // Récupère les valeurs des champs email et message
+          const email = document.getElementById('email').value;
+          const message = document.getElementById('message').value;
+          
+          // Ici, vous pourriez ajouter une logique d'envoi de formulaire côté serveur 
+          // avec une requête AJAX ou un autre mécanisme de communication.
+    
+          // Affichage du message pop-up
+          const messagePopup = document.createElement('div');
+          messagePopup.textContent = 'Le message a été envoyé avec succès!';
+          messagePopup.classList.add('popup-message');
+          document.body.appendChild(messagePopup);
+    
+          // Fermeture automatique du message après quelques secondes
+          setTimeout(function () {
+            document.body.removeChild(messagePopup);
+          }, 3000); // 3 secondes (3000 millisecondes)
+        });
+      });
+    </script>
+    
+</body>
+</html>
